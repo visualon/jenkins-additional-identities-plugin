@@ -35,9 +35,9 @@ jobs:
       - name: Upload plugin
         uses: actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 # renovate: tag=v2.3.1
         with:
-          name: jobcacher
+          name: additional-identities-plugin
           path: |
-            target/jobcacher.hpi
+            target/additional-identities-plugin.hpi
             target/version.txt
 
   release:
@@ -46,6 +46,9 @@ jobs:
     runs-on: ubuntu-latest
 
     if: github.ref == 'refs/heads/main'
+
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@7884fcad6b5d53d10323aee724dc68d8b9096a2e # tag=v2.4.2
@@ -58,7 +61,7 @@ jobs:
       - name: Download plugin
         uses: actions/download-artifact@f023be2c48cc18debc3bacd34cb396e0295e2869 # renovate: tag=v2.1.0
         with:
-          name: jobcacher
+          name: additional-identities-plugin
           path: .
 
       - name: Create git tag
@@ -71,7 +74,7 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@1e07f4398721186383de40550babbdf2b84acfc5 # renovate: tag=v1
         with:
-          files: jobcacher.hpi
+          files: additional-identities-plugin.hpi
           name: ${{ env.VERSION }}
           tag_name: v${{ env.VERSION }}
           body: Relase v${{ env.VERSION }}
