@@ -32,7 +32,7 @@
 
   <groupId>com.cloudbees.jenkins.plugins</groupId>
   <artifactId>additional-identities-plugin</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>${revision}${changelist}</version>
   <packaging>hpi</packaging>
 
   <name>Additional Identities Plugin</name>
@@ -60,6 +60,8 @@
   </scm>
 
   <properties>
+    <revision>1.2</revision>
+    <changelist>-SNAPSHOT</changelist>
     <jenkins.version>2.387.3</jenkins.version>
   </properties>
 
