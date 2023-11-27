@@ -1,8 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "visualon/renovate-config",
-    "visualon/renovate-config:jenkins"
-  ],
+  "extends": ["visualon/renovate-config", "visualon/renovate-config:jenkins"],
   "forkProcessing": "enabled"
 }
