@@ -36,7 +36,7 @@
   <packaging>hpi</packaging>
 
   <name>Additional Identities Plugin</name>
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/Additional+Identities+Plugin</url>
+  <url>https://plugins.jenkins.io/additional-identities-plugin/</url>
 
   <repositories>
     <repository>
@@ -62,15 +62,15 @@
   <properties>
     <revision>1.2</revision>
     <changelist>-SNAPSHOT</changelist>
-    <jenkins.version>2.387.3</jenkins.version>
+    <jenkins.version>2.440.1</jenkins.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>io.jenkins.tools.bom</groupId>
-        <artifactId>bom-2.387.x</artifactId>
-        <version>2543.vfb_1a_5fb_9496d</version>
+        <artifactId>bom-2.440.x</artifactId>
+        <version>2839.v003b_4d9d24fd</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
